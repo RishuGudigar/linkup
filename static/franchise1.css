@@ -1,0 +1,217 @@
+.info{
+
+    text-align:center;
+    
+}
+.heading1{
+    
+    text-align:left;
+    
+
+}
+.heading2{
+    
+    text-align:center;
+    
+}
+.heading3{
+
+    
+    text-align:right;
+    
+
+}
+#textbox{
+    display:flex;
+    flex-flow:row wrap;
+}
+#about{
+    text-align:center;
+
+}
+#policy{
+    text-align:center;
+}
+p{
+    text-align:center;
+    font-style: italic;
+    font-size:20px;
+    
+
+    
+}
+  
+
+.about{
+
+    margin-top:40px;
+    text-align:center;
+    
+    
+  }
+  #para,#parag{
+    text-decoration: underline;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  #para,#parag{
+    animation: slideIn 1s 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  #para,#parag:hover {
+    animation: rotate 2s infinite;
+  }
+  
+  
+  
+ 
+  
+  @keyframes expandLine {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+
+footer {
+  background-color:black;
+  padding: 20px 0px;
+}
+
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+  width: 33%;
+  margin-bottom: 20px;
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-contact h3 {
+  color:blue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color:darkslateblue;
+  text-decoration: none;
+}
+
+.footer-contact p {
+  margin-bottom: 5px;
+  color:darkslateblue;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  color:darkslateblue;
+  font-size: 14px;
+}
+#copy{
+  color:darkslateblue;
+}
+#links{
+  color:darkslateblue;
+}
+.footerinfo,p{
+  color:darkslateblue;
+}
+.aboutus,p{
+  color:darkslateblue;
+}
+.color{
+  background-color:grey;
+}
+#center{
+  text-align:center;
+  text-decoration:underline;
+  
+
+}
+p{
+    text-align:center;
+    margin-top:20px;
+    color:grey;
+}
+#centero{
+  text-align:center;
+  text-decoration:underline;
+  margin-top:10px;
+}
+
+#h{
+  margin-top:20px;
+  margin-left:120px;
+  
+}
+#a{
+  margin-right:120px;
+  text-align:center;
+}
+#contact{
+  margin-left:140px;
+}
+#social{
+  color:darkslateblue;
+}
+
+
+
+
+

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Nav bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"  href="nav.css">
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/4d548a4e76.js" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-sm p-3 fixed-top">
+        <div class="container-fluid">
+            {% load static %}
+            <a class="navbar-brand" href="#">
+           
+              <h3> LinkUP </h3>
+             
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item ps-5" style="margin-left:185%">
+                  <a class="nav-link" href="{% url 'franchisor:Index' %}">Home</a>
+                </li>
+                <li class="nav-item ps-5">
+                  <a class="nav-link" href="#details">Details</a>
+                </li>
+               
+                <li class="nav-item ps-5">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+              </ul>
+             
+              
+            
+        
+        
+    </nav>
+      
+    <style>
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+        .navbar{
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            box-shadow: 3px 3px 10px black;
+            
+          }
+        
+          .navbar {
+            position: sticky;
+            transition: border-bottom-color 0.3s ease-in-out;
+          }
+        
+          .navbar:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #004d00;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+          }
+        
+          .navbar:hover {
+            border-bottom-color: #004d00;
+          }
+        
+          .navbar:hover:before {
+            transform: scaleX(1);
+          }
+        /* Navbar styles and hover styles start*/
+        
+        
+        
+        /* Brand or logo (image) styles and hover styles start*/
+          .logo-img {
+              transition: transform 0.3s ease-in-out;
+            }
+          
+          .logo-img:hover {
+          transform: scale(1.1);
+        
+          
+          }
+        
+          
+        /* Brand or logo (image) styles and hover styles end*/
+        
+        
+        
+        /* Navbar list (Home, About, Vision, Contact) styles and hover starts*/
+          .navbar-nav {
+            list-style: none;
+            padding: 0;
+            
+          }
+          
+          .nav-item {
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+            padding-top: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+            font-size:small;
+          }
+          .nav-link {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.3s ease-in-out;
+          }
+          
+          .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width 0.5s ease-in-out;
+          }
+          
+          .nav-link:hover {
+            transform: scale(1.1);
+            
+          }
+          
+          .nav-link:hover:before {
+            width: 100%;
+            animation: underline 0.6s linear;
+          }
+          
+          @keyframes underline {
+            0% {
+              left: 0;
+              width: 0;
+            }
+            25% {
+              left: 0;
+              width: 100%;
+            }
+            50% {
+              left: 100%;
+              width: 0;
+            }
+            75% {
+              left: 0;
+              width: 100%;
+            }
+            100% {
+              left: 0;
+              width: 100%;
+            }
+          }
+        /* Navbar list (Home, About, Vision, Contact) styles and hover starts*/
+        
+        
+        
+        
+        
+        /* User profile or dropdown styles and hover styles starts */
+          .fa-regular{
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            background-color: black;
+          }
+        
+          .dropdown-menu.dropdown-menu-center {
+            left: 40% !important;
+            right: auto !important;
+            transform: translateX(-50%) !important;
+            margin-right: 0;
+          }
+        
+          .dropdown .btn:hover {
+            transform: scale(1.1);
+            }
+        
+          .dropdown-item{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+          }
+        
+          .dropdown-item:hover {
+            transform: scale(1.1);
+          }
+        
+          .dropdown-divider {
+            border: none;
+            height: 2px;
+            background-color: #000;
+            margin: 0.5rem 0;
+            opacity: 0.5;
+          }
+        /* User profile or dropdown styles and hover styles starts */  
+        
+        
+        
+        /* Media query styles for 576 px size user window starts */  
+          @media (max-width: 576px) {
+            .nav-item{
+                padding-left: 10%;
+            }
+        
+            .dropdown{
+                padding-left: 8%;
+            }
+            
+            .dropdown-menu.dropdown-menu-center {
+              left: 30% !important;
+              right: 0 !important;
+              transform: translateX(0) !important;
+            }
+          }
+        /* Media query styles for 576 px size user window ends */
+        
+        body{
+            background-color: #f2f2f2;
+            font-family: Arial,  sans-serif;
+        }
+        .content-box {
+            width: 1000%;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-left: 38vh;
+            margin-bottom:20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .content-box h2{
+
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .franchise-header h1{
+
+          margin-bottom: 10px;
+          font-weight: bold;
+          font-size: 32px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+      }
+
+        .content-box:hover {
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .key-value {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        .key {
+            font-weight: bolder;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+        }
+        .key1{
+          font-weight: bolder;
+            font-size: 13px;
+            
+            letter-spacing: 1px;
+            color: #333;
+        }
+        .value{
+            font-weight: bolder;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+          .content-box {
+            width: 90%;
+          }
+          .contact-us {
+            position: static;
+            width: 100%;
+            margin: 0;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .content-box {
+            width: 95%;
+            padding: 10px;
+          }
+        }
+        
+        .contact-us {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-left: 38vh;
+            margin-bottom:20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .contact-us h2 {
+          margin-top: 0;
+        }
+        
+        .contact-us-form {
+          margin-top: 20px;
+        }
+        
+        .contact-us-form input,
+        .contact-us-form textarea {
+          width: 90%;
+          margin-bottom: 10px;
+          padding: 5px;
+        }
+        .franchise-header {
+            margin-left: 15vh;
+            padding: 40px 0;
+            background-color: #f2f2f2;
+            width:800px;          }
+          
+          .franchise-image {
+            margin-bottom: 20px;
+            
+          }
+          
+          .franchise-image img {
+            
+            height: auto;
+            width: 50%;
+            max-width: 800px;
+            margin-left:350px;
+            box-shadow: 10px 10px 10px black;
+          }
+          
+          .franchise-header h1 {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+          }
+
+        .content{
+            position: relative;
+        }
+
+     
+      
+     
+    </style>
+</head>
+<body>
+    <section class="franchise-header">
+        
+        <div class="franchise-image">
+          <img src="{{ profile.LOGO.url }}" alt="Franchise Logo" height="200px" width="200px">
+        </div>
+        <div>
+            
+        <h1 style="margin-left:38%">{{ profile.name }}</h1>
+        
+      </section>
+    
+<section class="content">
+   
+
+    <div class="about-us content-box">
+        <h2>About us</h2>
+        <hr>
+        <p>{{ profile.about_us }}</p>
+       
+        <h6 style="font-weight:bold">VISION</h6>
+        <hr>
+        <p>{{ profile.vision }}</p>
+        <h6 style="font-weight:bold">MISSION</h6>
+        <hr>
+        <p>{{ profile.mission }}</p>
+    </div>
+    
+    <div class="investment-detail content-box" id="details">
+        <h2>Franchise Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">Operations Commenced On</span>
+                <span class="value">{{ profile.operation_commenced}}</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Franchise Commenced On</span>
+                <span class="value">{{ profile.franchise_commenced}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="property-detail content-box">
+        <h2>Investment Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">AVG Investment:</span>
+                <span class="value">INR {{profile.investment}}</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Brand Fees:</span>
+                <span class="value">INR {{profile.brand_fee}}</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Royalty/Commission:</span>
+                <span class="value">{{profile.royalty}}%</span>
+            </div>
+        </div>
+    </div>
+    <div class="expansion-loc content-box">
+        <h2>Business Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">Anticipated return on Investment</span>
+                <span class="value">{{profile.anticipated_return_on_investment}}%</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Likely payback Period</span>
+                <span class="value">{{profile.likely_payback_period}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="property-details content-box">
+        <h2>Property Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">AVG Area required</span>
+                <span class="value">{{profile.floor_area_required}} Sq.feet</span>
+            </div>
+        </div>
+    </div>
+    <div class="employee-details content-box">
+        <h2>Employee Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">Number of Employees Required</span>
+                <span class="value">{{profile.employees_requires}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="agreement content-box">
+        <h2>Agreement Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">Is there a Standard Agreement</span>
+                <span class="key">{{profile.standard_agreement}}</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Franchise Term</span>
+                <span class="key">{{profile.franchise_term}} Years</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Is the term renewable?</span>
+                <span class="key">{{profile.term_renewable}}</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="contact-details content-box">
+        <h2>Contact Details</h2>
+        <hr>
+        <div class="container">
+            <div class="key-value">
+                <span class="key">Email</span>
+                <span class="key1">{{profile.user.email}}</span>
+            </div>
+            <div class="key-value">
+                <span class="key">Phone Number</span>
+                <span class="key">{{profile.phone_number}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us content-box" id="contact">
+        <h2 style="font-size: 14px;">Contact Us</h2>
+        <hr>
+        <div class="container contact-us-form">
+            {% csrf_token %}
+            <form action="{% url 'franchisor:contact' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name*" required>
+                <input type="email" name="email" placeholder="Contact Email*" required>
+                <textarea name="message" placeholder="Your Message*" required></textarea>
+                <button type="submit" style="background-color: #004d00; color: #fff; border: none; padding: 10px 20px; font-size: 14px; cursor: pointer;">Send Email</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section>
+  
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    window.addEventListener('scroll', function() {
+        var aboutUs = document.querySelector('.about-us');
+        var contactUs = document.querySelector('.contact-us');
+        var fixedDiv = document.querySelector('.fixed');
+
+        var aboutUsOffset = aboutUs.offsetTop;
+        var contactUsHeight = contactUs.offsetHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop >= aboutUsOffset) {
+            contactUs.style.height = contactUsHeight + 'px';
+            fixedDiv.classList.add('fixed');
+        } else {
+            contactUs.style.height = 'auto';
+            fixedDiv.classList.remove('fixed');
+        }
+    });
+</script>
+</body>
+</html>
+
+{% endblock content %}
