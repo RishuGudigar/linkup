@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-38)_1fbzoiip1n4r+6a#pm&a-(pq77@fzd60kgb8xj&ew5rk8*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://linkup-vioc.onrender.com/']
+ALLOWED_HOSTS = ['linkup-vioc.onrender.com']
 
 
 # Application definition
